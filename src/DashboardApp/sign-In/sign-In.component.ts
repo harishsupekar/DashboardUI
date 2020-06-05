@@ -4,11 +4,11 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'user-login',
-  templateUrl: './user-login.component.html',
-  styleUrls: ['./user-login.component.css']
+  selector: 'sign-In',
+  templateUrl: './sign-In.component.html',
+  styleUrls: ['./sign-In.component.css']
 })
-export class UserLoginComponent implements OnInit
+export class SignInComponent implements OnInit
 {
   //@Input() error: string | null;
   //@Output() submitEM = new EventEmitter();
@@ -24,11 +24,11 @@ export class UserLoginComponent implements OnInit
    checkLogin(username: string, password:string)
    {   
       this.apiServices.UserLogin(username,password).subscribe((data)=> this.responsToken = data);
-      if(this.responsToken["successKey"]!="InvalidUser")
+      if(this.responsToken["jwt"]!="InvalidUser")
       {
         debugger;
         console.log(this.responsToken);      
-        this.router.navigate(['/user-registration']);
+        this.router.navigate(['/SignUp']);
       }
    }
 }

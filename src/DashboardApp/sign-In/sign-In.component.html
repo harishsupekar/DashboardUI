@@ -18,12 +18,12 @@
             <div>
                 <button type="submit" class="button" (click)="checkLogin(userName, password)"  mat-stroked-button>Login</button> 
                 
-                <a routerLink="/user-registration">
+                <a routerLink="/SignUp">
                     <button type="submit" class="button" mat-stroked-button>Register</button>
                 </a>
                  
                 <div class="tokenResponse">
-                    {{responsToken['successKey']}}
+                    {{responsToken["jwt"]}}
                 </div>
 
             </div>

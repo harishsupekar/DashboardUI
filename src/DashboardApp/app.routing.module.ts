@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserLoginComponent } from './user-login/user-login.component';
-import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { SignInComponent } from './sign-In/sign-In.component';
+import { SignUpComponent } from './sign-Up/sign-Up.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = 
   [
-    { path: '' , redirectTo: '/user-login', pathMatch: 'full'}, //{ path: '', component: UserLoginComponent},
-    { path: 'user-login', component: UserLoginComponent },
-    { path: 'user-registration', component: UserRegistrationComponent },
+    { path: '' , redirectTo: '/SignIn', pathMatch: 'full'}, //{ path: '', component: SignInComponent},
+    { path: 'SignIn', component: SignInComponent },
+    { path: 'SignUp', component: SignUpComponent },
     { path: '**', component: PageNotFoundComponent}
   ];
 
@@ -18,4 +18,4 @@ const routes: Routes =
 })
 export class DashboardAppRoutingModule { }
 
-export const routingComponent = [UserRegistrationComponent, UserLoginComponent, PageNotFoundComponent]
+export const routingComponent = [SignInComponent, SignUpComponent, PageNotFoundComponent]
