@@ -3,11 +3,11 @@ import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { environment } from './environments/environment';
 
-import { LoginModule } from './Login/login.module';
+import { DashboardAppModule } from './DashboardApp/app.module';
 
 if (environment.production) {
   enableProdMode();
 } 
 
-platformBrowserDynamic().bootstrapModule(LoginModule)
+platformBrowserDynamic().bootstrapModule(DashboardAppModule)
   .catch(err => console.error(err));

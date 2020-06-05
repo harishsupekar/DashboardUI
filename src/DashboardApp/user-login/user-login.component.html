@@ -15,18 +15,22 @@
                 <input type="password" matInput placeholder="password" [(ngModel)]="password">  
             </mat-form-field>
             
-            <div >
+            <div>
                 <button type="submit" class="button" (click)="checkLogin(userName, password)"  mat-stroked-button>Login</button> 
+                
                 <a routerLink="/user-registration">
                     <button type="submit" class="button" mat-stroked-button>Register</button>
                 </a>
+                 
+                <div class="tokenResponse">
+                    {{responsToken['successKey']}}
+                </div>
+
             </div>
-            {{responsToken}}
 
         </div>
 
     </mat-card-content>
 </mat-card>
 
-<router-outlet></router-outlet>
 

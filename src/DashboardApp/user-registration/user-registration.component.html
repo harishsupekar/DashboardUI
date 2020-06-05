@@ -1,0 +1,29 @@
+
+<mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="angular">angular</mat-button-toggle>
+    <mat-button-toggle value="react">react</mat-button-toggle>
+    <mat-button-toggle value="vue">vue</mat-button-toggle>
+</mat-button-toggle-group>
+{{toggleGroup.value}}
+
+<div class="container">
+<mat-horizontal-stepper linear>
+    
+    <mat-step label="Basic Details" completed=true>
+        <p>Basci Details</p>
+    </mat-step>
+
+    <mat-step label="Addess" optional>
+        <p>Addess</p>
+    </mat-step>
+
+    <mat-step label="Account Details" completed=true>
+        <p>Account Details</p>
+    </mat-step>
+
+</mat-horizontal-stepper>
+
+    <a routerLink="/user-login">
+        <button type="submit" class="button" mat-stroked-button>Login</button>
+    </a>
+</div>

@@ -6,7 +6,8 @@
 
 .mat-card
 {
-  background-color:whitesmoke
+  background-color:whitesmoke;
+  max-width: 400px;
 }
 .mat-form-field 
 {
@@ -31,4 +32,11 @@ mat-card-content {
   margin-right: 01rem;
   box-shadow: springgreen;
   color: primary;
+}
+
+.tokenResponse
+{
+  justify-content:center;
+  max-width: 300px;
+  overflow-x:auto;
 }
