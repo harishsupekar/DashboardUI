@@ -2,7 +2,6 @@ import { Injectable, ɵConsole } from '@angular/core';
 import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../Models/User';
-
 //import 'rxjs/add/operator/catch';
 //import 'rxjs/add/observable/throw';
 
@@ -27,6 +26,5 @@ export class ApiService
   {
     return Observable.throw(error.message || "server error");
   }
-
   //UserLogin(username: string, password: string):Observable<any>{return this.http.get<any>(this.apiURL+ '/Login/Login?username=Harish&password=Harish@123')};
 }
