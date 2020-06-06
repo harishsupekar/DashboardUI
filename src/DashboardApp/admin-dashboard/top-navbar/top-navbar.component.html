@@ -1,0 +1,18 @@
+<mat-toolbar color="gray" class="navbar">
+    <div>Dashboard</div>
+    <div>
+        <mat-icon>all_inbox</mat-icon>
+        <mat-icon>analytics</mat-icon>
+        <mat-icon>home</mat-icon>
+        <mat-icon>info</mat-icon>
+        <mat-icon>search</mat-icon>
+        <mat-icon>settings</mat-icon>
+    </div>
+</mat-toolbar>
+
+<mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="angular">angular</mat-button-toggle>
+    <mat-button-toggle value="react">react</mat-button-toggle>
+    <mat-button-toggle value="vue">vue</mat-button-toggle>
+</mat-button-toggle-group> 
+{{toggleGroup.value}} 

@@ -1,0 +1,12 @@
+
+.navbar
+{
+    justify-content:space-between;
+}
+
+mat-icon
+{
+    margin: 10px;
+    height: 50px;
+    padding: 01rem;
+}

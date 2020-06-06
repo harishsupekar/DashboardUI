@@ -2,6 +2,7 @@ import { ApiService } from '../services/api.service';
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { empty } from 'rxjs';
 
 @Component({
   selector: 'sign-In',
@@ -22,13 +23,15 @@ export class SignInComponent implements OnInit
   ngOnInit(){ }
 
    checkLogin(username: string, password:string)
-   {   
+   {  
       this.apiServices.UserLogin(username,password).subscribe((data)=> this.responsToken = data);
-      if(this.responsToken["jwt"]!="InvalidUser")
+      this.responsToken;
+
+      if(this.responsToken["jwt"]!="InvalidUser" || this.responsToken["jwt"]!='undefined')
       {
         debugger;
         console.log(this.responsToken);      
-        this.router.navigate(['/SignUp']);
+        this.router.navigate(['/AdminDashboard']);
       }
    }
 }

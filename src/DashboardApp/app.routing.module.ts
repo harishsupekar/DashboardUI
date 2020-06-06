@@ -6,9 +6,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = 
   [
-    { path: '' , redirectTo: '/SignIn', pathMatch: 'full'}, //{ path: '', component: SignInComponent},
+    { path: '' , redirectTo: '/SignIn', pathMatch: 'full'},
     { path: 'SignIn', component: SignInComponent },
     { path: 'SignUp', component: SignUpComponent },
+    { path: 'AdminDashboard', loadChildren: () => import('./admin-dashboard/admin-dashboard.routing.module').then(m => m.AdminDashboardModule) },
     { path: '**', component: PageNotFoundComponent}
   ];
 
@@ -16,6 +17,6 @@ const routes: Routes =
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class DashboardAppRoutingModule { }
+export class AppRoutingModule { }
 
 export const routingComponent = [SignInComponent, SignUpComponent, PageNotFoundComponent]
