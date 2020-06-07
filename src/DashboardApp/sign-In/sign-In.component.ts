@@ -31,7 +31,7 @@ export class SignInComponent implements OnInit
       {
         debugger;
         console.log(this.responsToken);      
-        this.router.navigate(['/AdminDashboard']);
+        this.router.navigate(['/adminDashboard']);
       }
    }
 }

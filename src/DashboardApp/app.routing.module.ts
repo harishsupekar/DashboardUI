@@ -9,7 +9,7 @@ const routes: Routes =
     { path: '' , redirectTo: '/SignIn', pathMatch: 'full'},
     { path: 'SignIn', component: SignInComponent },
     { path: 'SignUp', component: SignUpComponent },
-    { path: 'AdminDashboard', loadChildren: () => import('./admin-dashboard/admin-dashboard.routing.module').then(m => m.AdminDashboardModule) },
+    { path: 'adminDashboard', loadChildren: () => import('./admin-dashboard/admin-dashboard.routing.module').then(m => m.AdminDashboardModule) },
     { path: '**', component: PageNotFoundComponent}
   ];
 
