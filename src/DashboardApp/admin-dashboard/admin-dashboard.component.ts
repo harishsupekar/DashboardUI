@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminDashboardComponent implements OnInit {
 
+  public myName = "Swapnil Supekar";
   constructor() { }
 
   ngOnInit() {

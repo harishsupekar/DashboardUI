@@ -10,3 +10,14 @@ mat-icon
     padding: 01rem;
     cursor: pointer;
 }
+
+.mat-menu-content:not(:empty)
+{
+    background-color: red;
+    padding: 0px;
+}
+
+mat-label .mat-icon
+{
+    margin: 0px 22px 7px 0px;
+}

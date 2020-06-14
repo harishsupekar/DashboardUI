@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-navbar',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavbarComponent implements OnInit {
 
-  constructor() { }
+  @Input('parentMyData') public passedData;
+  
 
-  ngOnInit() {
-  }
+  constructor(private router: Router) { }
+
+  ngOnInit() { }
+
+ Logout(): void
+ {
+   this.router.navigate(['/SignIn']);
+ }
 
 }

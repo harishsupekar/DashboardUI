@@ -1,18 +1,18 @@
+{{passedData}}
 <mat-toolbar color="gray" class="navbar">
-    <div>Dashboard</div>
+    <div>Administrator Dashboard</div>
     <div>
         <mat-icon>all_inbox</mat-icon>
         <mat-icon>analytics</mat-icon>
         <mat-icon>home</mat-icon>
         <mat-icon>info</mat-icon>
         <mat-icon>search</mat-icon>
-        <mat-icon>settings</mat-icon>
+        <mat-icon [matMenuTriggerFor]="userSettingdMenu">settings</mat-icon>
     </div>
 </mat-toolbar>
 
-<mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
-    <mat-button-toggle value="angular">angular</mat-button-toggle>
-    <mat-button-toggle value="react">react</mat-button-toggle>
-    <mat-button-toggle value="vue">vue</mat-button-toggle>
-</mat-button-toggle-group> 
-{{toggleGroup.value}} 
+<mat-menu class="mat-menu-content" style="padding: 0px;" mat-menu-content #userSettingdMenu="matMenu">
+    <mat-label mat-menu-item> <mat-icon>person</mat-icon> Profile</mat-label>
+    <mat-label mat-menu-item> <mat-icon>build</mat-icon> Change Password</mat-label>
+    <mat-label mat-menu-item (click)="Logout()"><mat-icon>logout</mat-icon> Logout </mat-label>
+</mat-menu>
