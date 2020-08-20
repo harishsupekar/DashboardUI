@@ -32,6 +32,7 @@ export class SignInComponent implements OnInit
         debugger;
         //
         alert("hey, I have added alert feature....");
+        alert("hey, I have added alert feature....");
         console.log(this.responsToken);      
         this.router.navigate(['/adminDashboard']);
       }
